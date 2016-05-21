@@ -7,6 +7,18 @@
     <groupId>br.com.agendador</groupId>
     <artifactId>AgendadorJavaCode</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>3.2.3.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>3.2.3.RELEASE</version>
+        </dependency>
+    </dependencies>
 </project>
