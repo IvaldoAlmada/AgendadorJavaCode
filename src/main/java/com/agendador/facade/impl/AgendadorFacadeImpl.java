@@ -6,6 +6,8 @@ import com.agendador.service.FacilitadorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 /**
  * Created by Ivaldo on 12/10/2016.
  */
@@ -18,5 +20,24 @@ public class AgendadorFacadeImpl implements AgendadorFacade {
     public Facilitador createFacilitador(Facilitador facilitador) {
         Facilitador facilitadorToReturn = facilitadorService.createFacilitador(facilitador);
         return facilitadorToReturn;
+    }
+
+    public Facilitador getFacilitadorById(String id) {
+        Facilitador facilitadorToReturn = facilitadorService.getById(id);
+        return facilitadorToReturn;
+    }
+
+    public List<Facilitador> getAllFacilitadores() {
+        List<Facilitador> facilitadores = facilitadorService.getAll();
+        return facilitadores;
+    }
+
+    public void delete(Facilitador facilitador) {
+        facilitadorService.delete(facilitador);
+    }
+
+    public Facilitador update(Facilitador facilitador) {
+        Facilitador updatedFacilitador = facilitadorService.updateFacilitador(facilitador);
+        return updatedFacilitador;
     }
 }
